@@ -1,36 +1,43 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-
-
-
-
-
+let votingAge;
+age = 18;
+if (age > 18) {
+    votingAge = true;
+}
+else {
+    votingAge = false;
+}
+console.log(votingAge);
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-
-
-
-
-
+let a=18;
+let b=17;
+if (a < b) {
+  a--;
+}
+else {
+  a++;
+}
+console.log(a);
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
-
-
-
-
+let a = "1999";
+console.log(Number(a));
 //Task d: Write a function to multiply a*b 
-
-
-
-
-
+function myFunct() {
+    let a=1;
+    let b=2;
+    return a*b;
+  }
+  myFunct();
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
-
-
-
+function dogYears() {
+    let years=31;
+    let dogYears=7;
+    return years*dogYears;
+  }
+  dogYears();
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
@@ -94,11 +101,25 @@
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
-
-  
-  
-
+function grade() {
+    let a = 99;
+    if (a >= 90 && a <= 99) {
+      return "A";
+    }
+    else if (a >= 80 && a <= 89) {
+      return "B";
+    }
+    else if (a >= 70 && a <= 79) {
+      return "C";
+    }
+    else if (a >= 60 && a <= 69) {
+      return "D";
+    }
+    else {
+      return "F";
+    }
+  }
+  grade();
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
