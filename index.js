@@ -55,44 +55,117 @@ function dogYears() {
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
-
-
-
-
+function feeder() {
+  let age = 15;
+  let weight = 100;
+  if (age < 12) {
+    if (age >= 2 && age < 5) {
+      return weight * .10;
+    } else if (age <= 4 && age < 8) {
+      return weight * .05;
+    } else {
+      return weight * .04;
+    }
+  }
+  if (age >= 12) {
+    if (weight >= 1 && weight < 6) {
+      return weight * .05;
+    } else if (weight >= 6 && weight < 11) {
+      return weight * .04;
+    } else if ( weight >= 11 && weight < 16) {
+      return weight * .03;
+    } else {
+      return weight * .02;
+    }
+  }
+}
+feeder(); 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+function RPS(){
+  let choice = "Scissors";
+  let comp = Math.round(Math.random() *3);
+  if (comp === 1) {
+    comp = "Rock";
+  }
+  else if (comp === 2) {
+    comp = "Paper";
+  }
+  else {
+    comp = "Scissors";
+  }
+  if (choice === "Rock") {
+    if (comp === "Scissors") {
+      return "You win!";
+    } else if (comp === "Paper") {
+      return "You lose!";
+    } else {
+      return "You tied";
+    }
+  }
+  if (choice === "Paper") {
+    if (comp === "Rock") {
+      return "You win!";
+    } else if (comp === "Scissors") {
+      return "You lose!";
+    } else {
+      return "You tied";
+    }
+  }
+  if (choice === "Scissors") {
+    if (comp === "Paper") {
+      return "You win!";
+    } else if (comp === "Rock") {
+      return "You lose!";
+    } else {
+      return "You tied";
+    }
+  }
+}
 
-  
-  
-
+RPS();
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
-
-
-
+function KM() {
+  let km = 20;
+  return km/1.609344
+}
+KM();
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
-
-
-
-
+ function FC() {
+   let feet = 30;
+   return feet*30.48;
+ } 
+ FC();
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-
-
-
-
+let bottles;
+for (i = 99; i >= 1; i = i - 1) 
+{
+    if (i == 1) {
+        bottles = 'bottle';
+    } else {
+        bottles = 'bottles';
+    }
+    console.log(i+" "+bottles+" of soda on the wall.");
+    if (i < 99) {
+        console.log("");
+        console.log(i+" "+bottles+" of soda on the wall.");
+    }
+    console.log(i+" "+bottles+" of soda.");
+    console.log("Take one down.");
+    console.log("Pass it around.");
+    if (i == 1) {
+        console.log("No more bottles of soda on the wall.");
+    }
+} 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
